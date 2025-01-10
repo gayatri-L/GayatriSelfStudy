@@ -4,8 +4,7 @@ package demo;
 public class First {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Welcome to Java Programming!!!");
+		
 		int sub1 = 80;
 		int sub2 = 90;
 		int sub3 = 95;
@@ -15,15 +14,12 @@ public class First {
 		
 		float percentage = (float)total/5;
 		System.out.println("Percentage is: "+percentage+"%");
-		
-		int a = 11;
-		float p = (float)a;
-		
-		System.out.println(p);
-
 	}
-
 }
+Output: 
+Percentage is: 
+Percentage is: 88.8%
+11.0
 
 
 Program 2:
@@ -51,8 +47,11 @@ public class Areas {
 		float pi = 3.14f;
 		float radius = 5;
 		
-		System.out.println("Area of Circle is: "+(pi*radius*radius));
-		
+		System.out.println("Area of Circle is: "+(pi*radius*radius));	
 	}
-
 }
+Output: 
+Area of rectangle is: 50
+Area of Square: 25
+Area of Triangle: 30.0
+Area of Circle is: 78.5
