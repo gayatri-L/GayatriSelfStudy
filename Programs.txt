@@ -1,0 +1,58 @@
+Program 1: 
+package demo;
+
+public class First {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to Java Programming!!!");
+		int sub1 = 80;
+		int sub2 = 90;
+		int sub3 = 95;
+		int sub4 = 92;
+		int sub5 = 87;
+		int total = sub1+sub2+sub3+sub4+sub5;
+		
+		float percentage = (float)total/5;
+		System.out.println("Percentage is: "+percentage+"%");
+		
+		int a = 11;
+		float p = (float)a;
+		
+		System.out.println(p);
+
+	}
+
+}
+
+
+Program 2:
+package demo;
+
+public class Areas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Area of rectangle
+		int length=5, breadth=10;
+		System.out.println("Area of rectangle is: "+(length*breadth));
+	
+		
+		//Area of Square
+		int side = 5;
+		System.out.println("Area of Square: "+(side*side));
+	
+		//Area of Triangle
+		int base=6, height=10;
+		System.out.println("Area of Triangle: "+(0.5*base*height));
+		
+		//Area of Circle
+		float pi = 3.14f;
+		float radius = 5;
+		
+		System.out.println("Area of Circle is: "+(pi*radius*radius));
+		
+	}
+
+}
