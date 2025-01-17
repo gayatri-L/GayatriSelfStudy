@@ -1,0 +1,232 @@
+//LAB2 Exercise
+Q. 1] WAJP for creating a mini calculator for performing a particular operation based on user choice. ex. if the user will    	select the addition operation then the output should be the addition of the given two nos.
+CODE: 
+
+package demo;
+
+/*WAP for creating a mini calculator for performing a particular operation
+based on user choice.
+ex. if the user will select the addition operation then the output should be 
+the addition of the given two nos.*/
+import java.util.Scanner;
+public class MiniCalculator {
+	
+	public static void operations(int choice, int a, int b) {
+		int res;
+		switch(choice) {			//Using Switch Control Statement
+		case 1: 					//When user enters 1, addition operation will perform
+			res = a+b;
+			System.out.println("Addition is: "+res);
+			break;
+		
+		case 2: 				//When user enters 2, subtraction operation will perform
+			res = a-b;
+			System.out.println("Subtraction is: "+res);
+			break;
+			
+		case 3:				//When user enters 3, multiplication operation will perform
+			res = a*b;
+			System.out.println("Multiplication is: "+res);
+			break;
+			
+		case 4:				//When user enters 4, division operation will perform
+			float res1 = (float)a/(float)b;	//Here we converted integer a and b into float, known as type casting
+			if(b==0) {
+				System.out.println("Division can not perform because we can not divide by zero.");
+			}
+			else
+			{
+			System.out.println("Division is: "+res1);
+			}
+			break;
+			
+			
+		case 5: 
+			res = a%b;     //When user enters 5, Modulo operation will perform
+			System.out.println("Modulo is: "+res);
+			break;
+		}
+	
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Select any one operation from the following(1/2/3/4): ");
+		System.out.println("1. Addition Operation \n2. Subtraction Operation\n3. Multiplication Operation\n4. Division Operation\n5. Modulo Operation");
+		int choice = sc.nextInt();
+		
+		System.out.println("Enter two numbers: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		operations(choice, a, b);
+	}
+}
+
+OUTPUT 1: 
+Select any one operation from the following(1/2/3/4): 
+1. Addition Operation 
+2. Subtraction Operation
+3. Multiplication Operation
+4. Division Operation
+5. Modulo Operation
+4
+Enter two numbers: 
+55
+2
+Division is: 27.5
+
+OUTPUT 2: 
+Select any one operation from the following(1/2/3/4): 
+1. Addition Operation 
+2. Subtraction Operation
+3. Multiplication Operation
+4. Division Operation
+5. Modulo Operation
+4
+Enter two numbers: 
+55
+2
+Division is: 27.5
+
+
+Q. 2]  WAP for creating a banking Application .you have to take input from the user whether the user wants to deposit, 	   withdraw, or find a current balance.
+CODE: 
+
+package demo;
+
+import java.util.Scanner;
+
+/*2. WAP for creating a banking Application.you have to take input from the user
+  whether the user wants to deposit, withdraw, or find a current balance.*/
+public class BankingApplication {
+	private double balance;
+	
+	public BankingApplication(double initialBalance) {
+		this.balance = initialBalance;
+	}
+	
+	//Method of Deposit 
+	public void deposit(double amt) {
+		if(amt > 0) {
+			balance += amt;
+			System.out.println("Amount deposited successufully.\nCurrent balance is: "+balance);
+		}else {
+			System.out.println("Deposited amount should be greater than zero.");
+		}
+	}
+	
+	//Method to Withdraw money
+	public void withdraw(double amt) {
+		if(amt>0)
+		{
+			if(amt <= balance)
+			{
+				balance-=amt;
+				System.out.println("Amount withdrawn successfully.\nCurrent balance is: "+balance);
+			}else
+			{
+				System.out.println("Insufficient balance.\nCurrent balance is: "+balance);
+			}
+		}
+		else
+		{
+			System.out.println("Withdrwal amount should be greater than zero. ");
+		}
+	}
+	
+	//Method to display current balance
+	public void currentBalance() {
+		System.out.println("Current balance is: "+balance);
+	}
+	
+	public static void main(String arg[]) {
+		
+		Scanner sc  = new Scanner(System.in);
+		
+		System.out.println("Enter initial balance: ");
+		double initialBalance = sc.nextDouble();
+		
+		BankingApplication user = new BankingApplication(initialBalance);
+		
+		System.out.println("*****WELCOME TO GAYATRI BANK APPLICATION***** ");
+		System.out.println("Enter your choice(1/2/3/4): ");
+		while(true) {
+		System.out.println("1. Deposit the amount \n2. Withdraw the amount."
+				+ " \n3. Check current balance\n4. Exit");
+		int choice = sc.nextInt();
+		switch(choice)
+		{
+		case 1: 
+			System.out.println("Enter amount to deposit: ");
+			double depositAmt = sc.nextDouble();
+			user.deposit(depositAmt);
+			break;
+		
+		case 2:
+			System.out.println("Enter amount to withdraw: ");
+			double withdrawAmt = sc.nextDouble();
+			user.withdraw(withdrawAmt);
+			break;
+		
+		case 3:
+			user.currentBalance();
+			break;
+		
+		case 4: 
+			System.out.println("Thank you for you time.\nSee you soon !!");
+			System.exit(0);
+			break;
+			
+		default:
+			System.out.println("Please enter valid choice.");
+			sc.close();
+			
+			}
+	}
+}
+}
+
+
+
+OUTPUT:
+
+Enter initial balance: 
+11000
+*****WELCOME TO GAYATRI BANK APPLICATION***** 
+Enter your choice(1/2/3/4): 
+1. Deposit the amount 
+2. Withdraw the amount. 
+3. Check current balance
+4. Exit
+
+2
+Enter amount to withdraw: 
+1000
+Amount withdrawn successfully.
+Current balance is: 10000.0
+1. Deposit the amount 
+2. Withdraw the amount. 
+3. Check current balance
+4. Exit
+2
+Enter amount to withdraw: 
+1000
+Amount withdrawn successfully.
+Current balance is: 9000.0
+1. Deposit the amount 
+2. Withdraw the amount. 
+3. Check current balance
+4. Exit
+
+1
+Enter amount to deposit: 
+5000
+Amount deposited successufully.
+Current balance is: 14000.0
+1. Deposit the amount 
+2. Withdraw the amount. 
+3. Check current balance
+4. Exit
+4
+Thank you for you time.
+See you soon !!
+

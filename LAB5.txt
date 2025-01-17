@@ -1,0 +1,5 @@
+LAB 5
+
+Q. 1]  Write a conventional Java class (Bean class) to demonstrate an employee details. 
+	Additionally, print Employee details 
+	Calculate incremented salary of employee. Use multiple employees for this example.

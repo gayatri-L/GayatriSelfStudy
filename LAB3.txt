@@ -1,0 +1,94 @@
+LAB 3 : 
+Q. 1] Write a program to demonstrate all primitive datatypes in Java.
+
+Q.2] Write a program to input student marks of multiple subject..print total of marks , result depending on percentage.
+
+PROGRAM 1:
+
+package demo;
+
+public class PrimitiveTypes {
+	public static void main(String ar[]) {
+	//LAB 3 : 1. Write a program to demonstrate all primitive datatypes in Java.
+	int myInt = 15;
+	short myShort = 100;
+	long myLong = 2003L;
+	float myFloat = 84.56F;
+	double myDouble = 25.345567;
+	boolean myBoolean = false;
+	byte myByte = 120;
+	char myChar = 'A';
+	System.out.println("1. Integer: "+myInt+"\n2. Short: "+myShort+"\n3. Long: "+myLong+"\n4. Float: "+myFloat+"\n5. Double: "+myDouble+"\n6. Byte: "+myByte+"\n7. Boolean: "+myBoolean+"\n8. Char: "+myChar);
+	}
+}
+
+OUTPUT: 
+1. Integer: 15
+2. Short: 100
+3. Long: 2003
+4. Float: 84.56
+5. Double: 25.345567
+6. Byte: 120
+7. Boolean: false
+8. Char: A
+
+PROGRAM 2:
+package demo;
+import java.util.Scanner;
+public class Student {
+
+	public static void main(String[] args) {
+		/*2. Write a program to input student marks of multiple subject..
+		print total of marks , result depending on percentage*/
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Hello Student!\nPlease enter your marks here..!");
+		int phy = sc.nextInt();
+		int chem =sc.nextInt();
+		int math =sc.nextInt();
+		int bio = sc.nextInt();
+		int eng = sc.nextInt();
+		
+		int total = phy+chem+math+bio+eng;
+		System.out.println("Total Marks: "+total);
+	
+		float percentage = (float)total/5;
+		System.out.println("Your Percentage is: "+percentage);
+		
+		if(percentage>=35) {
+			System.out.println("Congratulations Dear!\n You are Pass.");
+		}else {
+			System.out.println("Sorry Dear!\nYou are Fail..");
+		}
+		sc.close();
+	}
+}
+
+OUTPUT: 
+Hello Student!
+Please enter your marks here..!
+99
+98
+89
+90
+87
+Total Marks: 463
+Your Percentage is: 92.6
+Congratulations Dear!
+You are Pass.
+
+Hello Student!
+Please enter your marks here..!
+35
+35
+30
+25
+29
+Total Marks: 154
+Your Percentage is: 30.8
+Sorry Dear!
+You are Fail..
+
+
+
+

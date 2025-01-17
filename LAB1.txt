@@ -1,0 +1,46 @@
+//LAB 1:  
+Q. 1] WAJP to print "Hello World" message.
+CODE:
+package demo;
+
+public class FirstPrint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("HELLO WORLD !");
+	}
+
+}
+OUTPUT: 
+HELLO WORLD !
+
+Q. 2] WAJP to demo about all java primitive data types.
+CODE:
+package demo;
+
+public class PrimitiveDataTypes {
+
+	public static void main(String[] args) {
+		//Using all primitive data types
+		int myInt = 11;
+		short myShort = 128;
+		long myLong = 2004L;
+		float myFloat = 94.56F;
+		double myDouble = 12.345567;
+		boolean myBoolean = true;
+		byte myByte = 127;
+		char myChar = 'G';
+		System.out.println("1. Integer: "+myInt+"\n2. Short: "+myShort+"\n3. Long: "+myLong+"\n4. Float: "+myFloat+"\n5. Double: "+myDouble+"\n6. Byte: "+myByte+"\n7. Boolean: "+myBoolean+"\n8. Char: "+myChar);
+	}
+}
+
+OUTPUT:
+1. Integer: 11
+2. Short: 128
+3. Long: 2004
+4. Float: 94.56
+5. Double: 12.345567
+6. Byte: 127
+7. Boolean: true
+8. Char: G
+

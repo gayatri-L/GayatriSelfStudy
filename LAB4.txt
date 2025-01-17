@@ -1,0 +1,76 @@
+Lab 4.
+Q. 1] Write a program to demonstrate  use of  type casting in java. Print result after type casting.
+
+Q. 2] Write a program to demonstrate use of local, instance and static variables in java.
+
+PROGRAM 1:
+package demo;
+
+public class TypeCasting {
+
+	public static void main(String[] args) {
+		/*Q. 1] Write a program to demonstrate use of type casting in java.
+		  Print result after type casting.*/
+		int num1 = 11;
+		int num2 = 5;
+		
+		int res = num1/num2;
+		System.out.println("Before typecasting: "+res);
+		
+		float res1 = (float)num1 / (float)num2; //Here we converted integer num1 and num2 into floating points
+		System.out.println("After typecasting: "+res1);
+	}
+}
+
+OUTPUT: 
+Before typecasting: 2
+After typecasting: 2.2
+
+
+PROGRAM 2:
+package demo;
+
+public class VariableDemo {
+	int var1;			//instance variable
+	static int var2;	//Static variable
+	
+	//Constructor for the initializing the instance variable
+	public VariableDemo(int val) {
+		var1 = val;
+	}
+	public void localVariable() {
+		int var3 = 10;		//Local variable
+		System.out.println("Local Variable: "+var3);
+	}
+	
+	public void showVariables() {
+		System.out.println("Instance Variable: "+var1);
+		System.out.println("Static Variable: "+var2);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Object 1:");
+		VariableDemo ob1 = new VariableDemo(10);	//Object 1
+		ob1.localVariable();
+		ob1.showVariables();
+		var2 = 100;			//Let's update static variable
+		
+		System.out.println("Object 2:");
+		VariableDemo ob2 = new VariableDemo(11);
+		ob2.localVariable();
+		ob2.showVariables();		
+	}
+}
+
+OUTPUT: 
+Object 1:
+Local Variable: 10
+Instance Variable: 10
+Static Variable: 0
+Object 2:
+Local Variable: 10
+Instance Variable: 11
+Static Variable: 100
+Static variable: 100
+
+
